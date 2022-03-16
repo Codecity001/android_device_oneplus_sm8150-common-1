@@ -228,7 +228,7 @@ PRODUCT_PACKAGES += \
 
 ifeq ($(PRODUCT_USE_DYNAMIC_PARTITIONS),true)
 PRODUCT_COPY_FILES += \
-    $(VENDOR_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_RAMDISK)/fstab.qcom
+    $(VENDOR_PATH)/init/etc/fstab.qcom:$(TARGET_COPY_OUT_RAMDISK)/fstab.qcom
 endif
 
 # Gatekeeper
