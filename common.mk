@@ -226,11 +226,6 @@ PRODUCT_VENDOR_PROPERTIES += \
 PRODUCT_PACKAGES += \
     fstab.qcom
 
-ifeq ($(PRODUCT_USE_DYNAMIC_PARTITIONS),true)
-PRODUCT_COPY_FILES += \
-    $(VENDOR_PATH)/init/etc/fstab.qcom:$(TARGET_COPY_OUT_RAMDISK)/fstab.qcom
-endif
-
 # Gatekeeper
 PRODUCT_VENDOR_PROPERTIES += \
     vendor.gatekeeper.disable_spu=true

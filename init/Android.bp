@@ -11,41 +11,49 @@ sh_binary {
 sh_binary {
     name: "init.qcom.class_core.sh",
     src: "bin/init.qcom.class_core.sh",
+    vendor: true,
 }
 
 sh_binary {
     name: "init.qcom.early_boot.sh",
     src: "bin/init.qcom.early_boot.sh",
+    vendor: true,
 }
 
 sh_binary {
     name: "init.qcom.post_boot.sh",
     src: "bin/init.qcom.post_boot.sh",
+    vendor: true,
 }
 
 sh_binary {
     name: "init.qcom.sensors.sh",
     src: "bin/init.qcom.sensors.sh",
+    vendor: true,
 }
 
 sh_binary {
     name: "init.qcom.sh",
     src: "bin/init.qcom.sh",
+    vendor: true,
 }
 
 sh_binary {
     name: "init.qti.chg_policy.sh",
     src: "bin/init.qti.chg_policy.sh",
+    vendor: true,
 }
 
 sh_binary {
     name: "init.qti.dcvs.sh",
     src: "bin/init.qti.dcvs.sh",
+    vendor: true,
 }
 
 sh_binary {
     name: "init.qti.qcv.sh",
     src: "bin/init.qti.qcv.sh",
+    vendor: true,
 }
 
 // Common init scripts
@@ -60,7 +68,6 @@ prebuilt_etc {
 prebuilt_etc {
     name: "init.oneplus.usb.rc",
     src: "etc/init.oneplus.usb.rc",
-    sub_dir: "init/hw",
     vendor: true,
 }
 
