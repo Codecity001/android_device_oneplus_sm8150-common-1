@@ -35,7 +35,12 @@ BOARD_KERNEL_CMDLINE += androidboot.vbmeta.avb_version=1.0
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_SEPARATED_DTBO := true
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
-KERNEL_DEFCONFIG := vendor/sm8150-perf_defconfig
+KERNEL_DEFCONFIG := ../neptune_defconfig 
+TARGET_KERNEL_CLANG_VERSION := dora
+TARGET_KERNEL_CLANG_PATH := $(shell pwd)/prebuilts/clang/host/linux-x86/clang-dora
+TARGET_KERNEL_ADDITIONAL_FLAGS := \
+    DTC_EXT=$(shell pwd)/out/host/$(HOST_OS)-x86/bin/dtc \
+    LLVM=1 AR=llvm-ar NM=llvm-nm OBJCOPY=llvm-objcopy OBJDUMP=llvm-objdump STRIP=llvm-strip LD=ld.lld
 KERNEL_LLVM_SUPPORT := true
 KERNEL_CUSTOM_LLVM := true
 
